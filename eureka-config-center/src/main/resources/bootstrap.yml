@@ -1,0 +1,14 @@
+spring:
+  cloud:
+    config:
+      profile: dev
+      label: master
+      name: demo
+      discovery:
+        enabled: true
+        service-id: config-server-git
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

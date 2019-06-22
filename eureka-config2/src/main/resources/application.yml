@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: config-server-git
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ly6503/cloud-test.git
+          search-paths: spring_cloud_in_action/config-repo #配置文件路径 git目录
+          username:
+          password:
+          basedir: E:/Config/basedir #指定缓存位置
+      discovery:
+        enabled: true
+server:
+  port: 7002
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/  #,http://localhost:8762/eureka/
